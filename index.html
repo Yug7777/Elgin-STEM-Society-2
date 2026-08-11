@@ -2,19 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elgin STEM Society</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="faq-card">
-    <h3>What is STEM Society?</h3>
-    <p class="faq-answer">We are a student organization focused on science, tech, engineering, and math.</p>
-  </div>
+  <main class="container">
+    
+    <section class="card hero-card">
+      <h1>ELGIN STEM SOCIETY</h1>
+      <p class="subtitle">A Community for Curious Minds</p>
+      <p>Are you a student in Elgin or a surrounding community interested in science, technology, engineering, or mathematics?</p>
+      <p>Join the Elgin STEM Society — a place for students to connect, learn, and collaborate with others who share a passion for STEM.</p>
+    </section>
 
-  <div class="faq-card">
-    <h3>How do I join?</h3>
-    <p class="faq-answer">You can join by attending our next meeting or signing up online!</p>
+    <section class="card">
+      <h2 class="section-title">What We Do</h2>
+      <div class="grid-4">
+        <div class="feature-box">
+          <h3>Explore STEM Topics</h3>
+          <p>Discover exciting ideas and concepts across science, technology, engineering, and mathematics.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Hands-On Activities</h3>
+          <p>Participate in challenges, projects, and activities that bring STEM to life.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Collaborate and Connect</h3>
+          <p>Meet students with similar interests and work together to solve problems.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Build Skills</h3>
+          <p>Develop creativity, teamwork, and problem-solving skills that can be useful in school and beyond.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="resetBtn">Reset World</button>
+        <button id="saveBtn">Save World</button>
+      </div>
+    </header>
+
+    <main class="game-panel">
+      <canvas id="gameCanvas" width="960" height="540"></canvas>
+      <div class="hud">
+        <div id="inventory" class="inventory"></div>
+        <div class="status-card">
+          <p><strong>Controls:</strong> WASD or arrow keys to move • Left click to break • Right click to place • 1-8 to switch blocks</p>
+          <p><strong>Goal:</strong> Mine blocks, build a base, and save your world in your browser.</p>
+        </div>
+      </div>
+    </main>
   </div>
 
   <script src="script.js"></script>

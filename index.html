@@ -1,36 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minecraft-Inspired Builder</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app-shell">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Browser Sandbox</p>
-        <h1>Minecraft-Inspired Builder</h1>
-      </div>
-      <div class="actions">
-        <button id="resetBtn">Reset World</button>
-        <button id="saveBtn">Save World</button>
-      </div>
-    </header>
+<style>
+  .faq-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+  }
 
-    <main class="game-panel">
-      <canvas id="gameCanvas" width="960" height="540"></canvas>
-      <div class="hud">
-        <div id="inventory" class="inventory"></div>
-        <div class="status-card">
-          <p><strong>Controls:</strong> WASD or arrow keys to move • Left click to break • Right click to place • 1-8 to switch blocks</p>
-          <p><strong>Goal:</strong> Mine blocks, build a base, and save your world in your browser.</p>
-        </div>
-      </div>
-    </main>
+  .faq-title {
+    font-size: 28px;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0 0 8px 0;
+  }
+
+  .faq-accent-line {
+    width: 80px;
+    height: 4px;
+    background-color: #2563eb;
+    margin-bottom: 20px;
+  }
+
+  .faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-card {
+    background-color: #f0f7ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-card:hover {
+    background-color: #e0f0ff;
+  }
+
+  .faq-card h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .faq-card p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    display: none; /* Keeps answer hidden until clicked */
+  }
+</style>
+
+<div class="faq-container">
+  <h2 class="faq-title">Got Questions?</h2>
+  <div class="faq-accent-line"></div>
+
+  <div class="faq-grid">
+    <div class="faq-card">
+      <h3>Is there any fee to join?</h3>
+      <p>No, joining the Elgin STEM Society is 100% free for all students!</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Do I need prior STEM or coding experience?</h3>
+      <p>Not at all! Everyone is welcome, whether you are completely new or already building cool projects.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>How often do meetings take place?</h3>
+      <p>We meet bi-weekly. Check back here or sign up for exact dates and times!</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Can I both learn and volunteer?</h3>
+      <p>Yes! You can sign up as a student participant and also volunteer to lead or assist with activities.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>What age or grade levels can join?</h3>
+      <p>Our club is open to students in high school or below who live in Elgin or surrounding communities.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>What if I can't attend every meeting?</h3>
+      <p>That is totally okay! Come when you can, though regular attendance helps you get the most out of projects.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>How do I get started?</h3>
+      <p>Simply click on the registration links in the "Join Us" section to fill out our quick sign-up form!</p>
+    </div>
   </div>
+</div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<script>
+  document.querySelectorAll('.faq-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const p = card.querySelector('p');
+      const isVisible = p.style.display === 'block';
+      p.style.display = isVisible ? 'none' : 'block';
+    });
+  });
+</script>

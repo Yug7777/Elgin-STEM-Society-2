@@ -1,0 +1,163 @@
+/* Base Reset & Colors */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #90c2ff; /* Exact Sky Blue Background from Screenshot */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #2b303a;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* Page Container */
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* White Section Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Title Section Styling */
+.hero-card {
+  text-align: center;
+}
+
+.hero-card h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.hero-card .subtitle {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-card p {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Section Headings with Blue Underline */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #111827;
+  display: inline-block;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #2563eb;
+  margin-top: 6px;
+}
+
+/* Feature Boxes Grid (What We Do) */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.feature-box {
+  background-color: #f0f7ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.feature-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Join Us Links & Notes */
+.note-text {
+  font-size: 1rem;
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+.registration-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.text-link {
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: underline;
+}
+
+.text-link:hover {
+  color: #1e40af;
+}
+
+/* Contact Cards Layout */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.contact-card {
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.email-link {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
